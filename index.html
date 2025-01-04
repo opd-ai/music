@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musician Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="nav-brand">
+                <h1 class="site-title">Musician Name</h1>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="nav-icon"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#news">News</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="home-section">
+            <div class="container">
+                <div class="home-content markdown-content">
+                    <!-- Loaded from news.md -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Album Section -->
+        <section id="featured" class="featured-album">
+            <div class="container">
+                <div class="album-showcase">
+                    <div class="album-art">
+                        <!-- Dynamically loaded -->
+                    </div>
+                    <div class="album-info">
+                        <h2 class="album-title"></h2>
+                        <div class="album-description markdown-content"></div>
+                        <div class="album-player"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Music Catalog -->
+        <section id="music" class="music-catalog">
+            <div class="container">
+                <h2>Music</h2>
+                <div class="albums-grid">
+                    <!-- Dynamically populated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="bio-content markdown-content">
+                    <!-- Loaded from bio.md -->
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="news-section">
+            <div class="container">
+                <div class="news-content markdown-content">
+                    <!-- Loaded from news.md -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="social-links">
+                <!-- Populated from markdown -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Audio Player Template -->
+    <template id="audio-player-template">
+        <div class="audio-player">
+            <audio></audio>
+            <div class="player-controls">
+                <button class="play-pause" aria-label="Play">
+                    <span class="play-icon">▶</span>
+                    <span class="pause-icon">⏸</span>
+                </button>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="time-display">
+                    <span class="current-time">0:00</span>
+                    <span class="duration">0:00</span>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="js/markdown.js" type="module"></script>
+    <script src="js/player.js" type="module"></script>
+    <script src="js/contentManager.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>

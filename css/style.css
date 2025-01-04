@@ -1,0 +1,119 @@
+:root {
+    /* Enhanced color palette with better contrast */
+    --color-primary: #121212;
+    --color-secondary: #2d2d2d;
+    --color-accent: #3a7abd;
+    --color-background: #fafafa;
+    --color-text: #222222;
+    --color-text-light: #ffffff;
+    
+    /* Improved typography with better scale */
+    --font-primary: system-ui, -apple-system, sans-serif;
+    --font-secondary: Georgia, serif;
+    --font-scale: 1.25; /* Perfect fourth scale */
+    --font-size-base: clamp(16px, 1vw + 0.5rem, 18px);
+}
+
+/* Base Styles using semantic selectors */
+html {
+    font-size: var(--font-size-base);
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--color-text);
+    background: var(--color-background);
+}
+
+/* Semantic Header Styles */
+header {
+    background: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 70ch;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 70ch;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Semantic Section Styles */
+section {
+    margin: 4rem 0;
+}
+
+article {
+    background: var(--color-background);
+    border-radius: 4px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Music Player Components */
+.audio-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-secondary);
+    padding: 1rem;
+    color: var(--color-text-light);
+}
+
+/* Simplified Modal */
+dialog {
+    border: none;
+    border-radius: 4px;
+    padding: 2rem;
+    max-width: 70ch;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 40em) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+}
+
+/* Progressive Enhancement */
+@supports (display: grid) {
+    .music-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "albumDirectories": [
+        "debut-album",
+        "second-album",
+        "third-album"
+    ],
+    "featuredAlbum": "debut-album",
+    "metadata": {
+        "lastUpdated": "2023-12-20",
+        "totalAlbums": 3
+    }
+}
